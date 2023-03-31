@@ -131,8 +131,6 @@
 }
 
 .center {
-  text-align: left;
-  width: 100%;
   padding: 1.5rem 0;
 }
 
@@ -221,6 +219,9 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    padding: 1rem 2rem;
+  }
   .content {
     padding: 4rem;
   }
@@ -301,6 +302,15 @@
   }
   .section_hero h2 {
     font-size: 1rem;
+  }
+
+  .section_how__row {
+    flex-direction: column;
+  }
+
+  .section_cta__content {
+    flex-direction: column; 
+    gap: 2rem;
   }
 }
 
