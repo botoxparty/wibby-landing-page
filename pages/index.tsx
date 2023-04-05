@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Inter, Heebo } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Heebo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -29,7 +29,11 @@ export default function Home() {
         </div>
         <div>
           <section className={styles.section_hero}>
-            <h1>Every payment method in the world, always at the best price</h1>
+            <h1>
+              Every payment method in the world, always at the best price.
+              <br></br>
+              No bullsh*t
+            </h1>
             <h2>
               Stop switching your payment gateway. You’ve found the final one.
             </h2>
@@ -38,12 +42,30 @@ export default function Home() {
               <button>Watch Demo</button>
             </div> */}
           </section>
-          <section className={styles.section}>
+          <section className={styles.section + " " + styles.window}>
+            <h3>
+              Are you wondering{" "}
+              <span className={styles.italic}>“does it work for me?”</span>
+            </h3>
+            <p>
+              Yes, it does. It works for everybody. We have plugins, but our
+              APIs get us wherever we need to go.
+            </p>
+            <Image
+              className={styles.integrations}
+              width={1920}
+              height={500}
+              src="/wibby-integrations.png"
+              alt="Payment methods"
+            />
+          </section>
+          <section className={[styles.section, styles.window].join(" ")}>
             <h3>How does it work?</h3>
             <p>
-              Easy, we are not a payment gateway. We don’t even have a banking
-              license. We are at SaaS, and we are automatically doing what you
-              dreamt for years.
+              It{"'"}s simple. We are not a payment gateway. We don’t even have
+              a banking license. We are a service connecting you to a network of
+              payment providers to always offer you the most payment methods and
+              cheapest transactions.
             </p>
             <div className={styles.section_how}>
               <div className={styles.section_how__row}>
@@ -85,96 +107,53 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className={styles.section}>
-            <h3>This is gonna cost a fortune</h3>
-            <p>
-              No, it doesn’t. We ask for 2 things, a 9,99€ monthly fee, and we
-              surcharge 0,2% of the transaction to you. Remember, our service is
-              always getting you the best condition on any transaction, so you
-              make our cost back instantly. And you know it too.
-            </p>
+          <section className={[styles.section, styles.window].join(" ")}>
+            <h3>This is gonna cost a fortune!</h3>
+            <div className={styles.cost}>
+              <p>
+                No, it doesn’t. <br></br>
+                We ask for 2 things, a 9,99€ monthly fee, and we surcharge 0,2%
+                of the transaction to you. Remember, our service is always
+                getting you the best condition on any transaction, so you make
+                our cost back instantly. And you know it too.
+              </p>
+              <h4>
+                9.99€/month
+                <br></br>
+                <span>+ 0.2% surcharge per transaction</span>
+              </h4>
+            </div>
           </section>
           <section className={styles.section_cta}>
-            <h3>Realized this is going to change the world, yet?</h3>
+            <h3>Ready to get the best payments?</h3>
             <div className={styles.section_cta__content}>
-            <p>
-              If you feel like a big kid and you want to sign up all by yourself
-              you can do it right here:
-              <button className={styles.cta}>Sign up</button>
-            </p>
-            <p>
-            If you feel like you are such a big corporation that you deserve
-              speaking to a human, you can send us a request at this form. Heads
-              up, we don’t give discounts. Unless you bribe us with very cool
-              tickets. Then we might. Maybe. Let’s talk
-            </p>
+              <p>
+                Our goal is to always give you the best price possible. You can
+                start right here:
+                <button className={[styles.cta, inter.className].join(" ")}>
+                  Sign up
+                </button>
+              </p>
+              <p>
+                If you{"'"}re a large corporation, need a custom integration, or
+                need to speak to a human you can send us a request using this
+                form.
+              </p>
             </div>
           </section>
         </div>
-        <footer>
-          If this feels too good to be true, imagine our reaction when we
-          realized nobody else had built something like this. We’d be very happy
-          do bond over our holy sh*t moment and answer any question you have,
-          just text our bot who will connect you to the right person. Cheers!
+        <section className={styles.section + ` ` + styles.window}>
+          <p>
+            If this feels too good to be true, imagine our reaction when we
+            realized nobody else had built something like this. We’d be very
+            happy do bond over our holy sh*t moment and answer any question you
+            have, just text our bot who will connect you to the right person.
+            Cheers!
+          </p>
+        </section>
+        <footer className={styles.footer}>
+          Copyright 2023 Wibby. All rights reserved. <br></br>
         </footer>
-        {/* <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div> */}
       </main>
     </>
   );
