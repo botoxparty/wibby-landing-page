@@ -8,6 +8,7 @@
   max-width: 80rem;
   margin: auto;
   position: relative;
+  width: 100%;
 }
 
 .italic {
@@ -27,15 +28,18 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .section_how__col {
   flex: 0.3;
-  /* border: 1px solid black; */
   background-color: var(--powder-blue);
   border-radius: 0.6rem;
   padding: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 500px;
 }
 
 .section_how__col h4 {
@@ -62,6 +66,7 @@
   padding: 4rem;
   background-color: var(--powder-pink);
   box-shadow: 10px 10px 119px -29px rgba(0,0,0,0.15);
+  width: 100%;
 }
 
 .section_cta h3 {
@@ -172,6 +177,7 @@
   border-radius: 40px;
   box-shadow: 10px 10px 119px -29px rgba(0,0,0,0.15);
   padding: 4rem;
+  width: 100%;
 }
 
 .window h3 {
@@ -197,7 +203,6 @@
   font-size: 3rem;
   font-weight: 400;
   flex: 1;
-  padding: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,11 +294,16 @@
   margin-top: 4rem;
   margin-bottom: 2rem;
   font-size: 0.8rem;
-
 }
 
 /* Mobile */
 @media (max-width: 700px) {
+  .section_cta {
+    padding: 2rem;
+  }
+  .window {
+    padding: 2rem;
+  }
   .cost {
     flex-direction: column;
   }
@@ -382,10 +392,6 @@
     font-size: 1rem;
   }
 
-  .section_how__row {
-    flex-direction: column;
-  }
-
   .section_cta__content {
     flex-direction: column; 
     gap: 2rem;
@@ -396,17 +402,6 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 

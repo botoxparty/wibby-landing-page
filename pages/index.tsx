@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter, Heebo } from "next/font/google";
+import { Heebo } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-const inter = Heebo({ subsets: ["latin"] });
+const heebo = Heebo({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main + " " + inter.className}>
+      <main className={[styles.main, heebo.className].join(" ")}>
         <div className={styles.center}>
           <Image
             src="/wibby.svg"
@@ -42,7 +42,48 @@ export default function Home() {
               <button>Watch Demo</button>
             </div> */}
           </section>
-          <section className={styles.section + " " + styles.window}>
+          <section className={[styles.section, styles.window].join(" ")}>
+            <h3>How does it work?</h3>
+            <p>
+              It{"'"}s simple. We are not a payment gateway. We don’t even have
+              a banking license. We are a service connecting you to a network of
+              payment providers to always offer you the most payment methods and
+              the lowest cost transactions.
+            </p>
+            <div className={styles.section_how}>
+              <div className={styles.section_how__row}>
+                <div className={styles.section_how__col}>
+                  <h4>1</h4> You send us your documentation, and this is the
+                  last time you’ll ever do it.
+                </div>
+                <div className={styles.section_how__col}>
+                  <h4>2</h4> Once we have your documents, we get you approved by
+                  every PSP in our network. No worries, this takes very little
+                  time and absolutely no effort on your part.
+                </div>
+                <div className={styles.section_how__col}>
+                  <h4>3</h4> Install our service where you need it. If there’s a
+                  plugin, install that. If you need something more custom, go to
+                  town with our APIs.
+                </div>
+              </div>
+              <div className={styles.section_how__row}>
+                <div className={styles.section_how__col}>
+                  <h4>4</h4> Launch! This is where we work our magic. Your
+                  checkout will show the payment methods available through
+                  Wibby. Once the transaction is being processed, we
+                  automatically match it to the PSP that provides the best
+                  price.
+                </div>
+                <div className={styles.section_how__col}>
+                  <h4>5</h4> Go in your dashboard! From here you can manage your
+                  account, see your balance and transactions, how much they
+                  cost, and who processed it.
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className={[styles.section, styles.window].join(" ")}>
             <h3>
               Are you wondering{" "}
               <span className={styles.italic}>“does it work for me?”</span>
@@ -58,54 +99,6 @@ export default function Home() {
               src="/wibby-integrations.png"
               alt="Payment methods"
             />
-          </section>
-          <section className={[styles.section, styles.window].join(" ")}>
-            <h3>How does it work?</h3>
-            <p>
-              It{"'"}s simple. We are not a payment gateway. We don’t even have
-              a banking license. We are a service connecting you to a network of
-              payment providers to always offer you the most payment methods and
-              cheapest transactions.
-            </p>
-            <div className={styles.section_how}>
-              <div className={styles.section_how__row}>
-                <div className={styles.section_how__col}>
-                  <h4>1</h4> You send us your documentation, and this is the
-                  last time you’ll ever do it.
-                </div>
-                <div className={styles.section_how__col}>
-                  <h4>2</h4> Once we have your documents, we get you approved by
-                  every PSP that works with us around the world. No worries,
-                  this takes very little time and absolutely no effort on your
-                  part
-                </div>
-                <div className={styles.section_how__col}>
-                  <h4>3</h4> Whilst we are getting you approved, you install our
-                  service where you need it. If there’s a plugin, install that.
-                  If you need something more custom, go to town with our APIs.
-                </div>
-              </div>
-              <div className={styles.section_how__row}>
-                <div className={styles.section_how__col}>
-                  <h4>4</h4> Launch! This is where we work our magic. Your
-                  checkout will show the sum of all the payment methods that our
-                  partner PSPs offer. Based on the country from where the
-                  customer is checking out, we will show them the most relevant
-                  6 payment methods. If in need of something else, they can
-                  always find it by searching for it. Once the transaction is
-                  sent, we automatically assign it to the PSP that has provided
-                  your business with the best conditions. That way, you always
-                  have the best price.
-                </div>
-                <div className={styles.section_how__col}>
-                  <h4>5</h4> Go in your dashboard! From here, you can see all
-                  the transactions, how much they costed, who processed which
-                  transaction for you. You of course can see your balances, and
-                  do any action that you’re thinking of right from our
-                  dashboard.
-                </div>
-              </div>
-            </div>
           </section>
           <section className={[styles.section, styles.window].join(" ")}>
             <h3>This is gonna cost a fortune!</h3>
@@ -130,8 +123,8 @@ export default function Home() {
               <p>
                 Our goal is to always give you the best price possible. You can
                 start right here:
-                <button className={[styles.cta, inter.className].join(" ")}>
-                  Sign up
+                <button className={[styles.cta, heebo.className].join(" ")}>
+                  Sign up coming soon
                 </button>
               </p>
               <p>
@@ -141,16 +134,15 @@ export default function Home() {
               </p>
             </div>
           </section>
+          <section className={styles.section + ` ` + styles.window}>
+            <p>
+              Imagine our excitement when we discovered this innovation! We
+              would love to bond over our incredible discovery and address any
+              inquiries you may have. Simply message our bot and we{"'"}ll put
+              you in touch with the appropriate individual. Cheers!
+            </p>
+          </section>
         </div>
-        <section className={styles.section + ` ` + styles.window}>
-          <p>
-            If this feels too good to be true, imagine our reaction when we
-            realized nobody else had built something like this. We’d be very
-            happy do bond over our holy sh*t moment and answer any question you
-            have, just text our bot who will connect you to the right person.
-            Cheers!
-          </p>
-        </section>
         <footer className={styles.footer}>
           Copyright 2023 Wibby. All rights reserved. <br></br>
         </footer>
