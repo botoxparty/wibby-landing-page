@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Heebo } from "next/font/google";
+import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
+
+const wibbyfont = localFont({ src: "/wibbyfont.ttf"})
 
 const heebo = Heebo({ subsets: ["latin"] });
 
@@ -32,15 +35,11 @@ export default function Home() {
             <h1>
               Every payment method in the world, always at the best price.
               <br></br>
-              No bullsh*t
+              <span className={wibbyfont.className}>No bullsh*t</span>
             </h1>
             <h2>
               Stop switching your payment gateway. You’ve found the final one.
             </h2>
-            {/* <div className={styles.section_hero__buttons}>
-              <button>Try for free</button>
-              <button>Watch Demo</button>
-            </div> */}
           </section>
           <section className={[styles.section, styles.window].join(" ")}>
             <h3>How does it work?</h3>
@@ -110,7 +109,7 @@ export default function Home() {
                 getting you the best condition on any transaction, so you make
                 our cost back instantly. And you know it too.
               </p>
-              <h4>
+              <h4 className={wibbyfont.className}>
                 9.99€/month
                 <br></br>
                 <span>+ 0.2% surcharge per transaction</span>
