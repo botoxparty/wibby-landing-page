@@ -133,14 +133,14 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <section className={styles.section + ` ` + styles.window}>
+          {/* <section className={styles.section + ` ` + styles.window}>
             <p>
               Imagine our excitement when we discovered this innovation! We
               would love to bond over our incredible discovery and address any
               inquiries you may have. Simply message our bot and we{"'"}ll put
               you in touch with the appropriate individual. Cheers!
             </p>
-          </section>
+          </section> */}
         </div>
         <footer className={styles.footer}>
           Copyright 2023 Wibby. All rights reserved. <br></br>
