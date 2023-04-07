@@ -52,30 +52,30 @@ export default function Home() {
             <div className={styles.section_how}>
               <div className={styles.section_how__row}>
                 <div className={styles.section_how__col}>
-                  <h4>1</h4> You send us your documentation, and this is the
+                  <h4 className={wibbyfont.className}>1</h4> You send us your documentation, and this is the
                   last time you’ll ever do it.
                 </div>
                 <div className={styles.section_how__col}>
-                  <h4>2</h4> Once we have your documents, we get you approved by
+                  <h4 className={wibbyfont.className}>2</h4> Once we have your documents, we get you approved by
                   every PSP in our network. No worries, this takes very little
                   time and absolutely no effort on your part.
                 </div>
                 <div className={styles.section_how__col}>
-                  <h4>3</h4> Install our service where you need it. If there’s a
+                  <h4 className={wibbyfont.className}>3</h4> Install our service where you need it. If there’s a
                   plugin, install that. If you need something more custom, go to
                   town with our APIs.
                 </div>
               </div>
               <div className={styles.section_how__row}>
                 <div className={styles.section_how__col}>
-                  <h4>4</h4> Launch! This is where we work our magic. Your
+                  <h4 className={wibbyfont.className}>4</h4> Launch! This is where we work our magic. Your
                   checkout will show the payment methods available through
                   Wibby. Once the transaction is being processed, we
                   automatically match it to the PSP that provides the best
                   price.
                 </div>
                 <div className={styles.section_how__col}>
-                  <h4>5</h4> Go in your dashboard! From here you can manage your
+                  <h4 className={wibbyfont.className}>5</h4> Go in your dashboard! From here you can manage your
                   account, see your balance and transactions, how much they
                   cost, and who processed it.
                 </div>
